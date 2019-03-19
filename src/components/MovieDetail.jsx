@@ -46,7 +46,7 @@ export default class MovieDetail extends React.Component {
         fetchJsonp(`https://api.douban.com/v2/movie/subject/${this.state.id}`)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 this.setState({
                     movieDetail: data,
                     isLoading: false

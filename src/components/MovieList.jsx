@@ -60,11 +60,11 @@ export default class MovieList extends React.Component {
     //请求电影数据
     getMovieListDataByPage = () => {
         const start = (this.state.currentPage - 1) * this.state.pageSize;
-        console.log(this.state)
+        // console.log(this.state)
         fetchJsonp(`https://api.douban.com/v2/movie/${this.state.type}?start=${start}&count=${this.state.pageSize}`)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 this.setState({
                     movieList: data.subjects,
                     totalPage: data.total,
