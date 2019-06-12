@@ -43,7 +43,7 @@ export default class MovieDetail extends React.Component {
     };
     //请求电影数据
     getMovieListDataByPage = () => {
-        fetchJsonp(`https://api.douban.com/v2/movie/subject/${this.state.id}`)
+        fetchJsonp(`https://api.douban.com/v2/movie/subject/${this.state.id}?apikey=0df993c66c0c636e29ecbb5344252a4a`)
             .then(response => response.json())
             .then(data => {
                 // console.log(data);
